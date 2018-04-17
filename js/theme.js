@@ -1,33 +1,34 @@
 (function ($) {
 
 
-
-      // Adding Slick.js to the top Banner
-      // http://kenwheeler.github.io/slick/
-
-      jQuery(document).ready(function(){
-        jQuery('.pageSlider').slick({
-      	adaptiveHeight: false,
-      	autoplay: true,
-        arrows: false,
-      	autoplaySpeed: 6000,
-      	speed: 850,
-      	fade: true,
-      	cssEase: 'linear'
-        });
-
-      //Adding Slick.js to the news section
-      	jQuery('.newsSlide').slick({
-      	adaptiveHeight: false,
-      	autoplay: false,
-        arrows: false
-        });
-
-      });
-
-  jQuery( "#move-right" ).click(function() {
-    jQuery('.newsSlide').slick('slickNext');
+// Banner section slider
+function sliderBanner() {
+  $('.pageSlider').slick({
+    adaptiveHeight: false,
+    autoplay: true,
+    arrows: false,
+    autoplaySpeed: 6000,
+    speed: 850,
+    fade: true,
+    cssEase: 'linear'
   });
+}
+
+// News section slider
+function sliderNews() {
+  $('.newsSlide').slick({
+    adaptiveHeight: false,
+    autoplay: false,
+    nextArrow: '<a class="sectionPress-more" id="move-right">See more</a>'
+  });
+}
+
+
+
+
+
+
+
 
 
   // Waypoint
@@ -213,10 +214,18 @@ function seeMore() {
 
 $(document).ready(function() {
 
+  // Sliders
+  sliderBanner();
+  sliderNews();
+
+
+
   theModal();
 
-  seeMore();
+});
 
+$( "#move-right" ).click(function() {
+  sliderMore();
 });
 
 $(document).on('click', '.collapseomatic', function(){
