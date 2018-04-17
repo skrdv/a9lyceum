@@ -17,8 +17,8 @@
   	<p>Visit<br>Learning<br>Website</p>
   </div>
   </a>
-</div>  
-  
+</div>
+
 
 <?php if (have_rows('team-persons')): ?>
   <?php while(have_rows('team-persons')): the_row(); ?>
@@ -48,40 +48,40 @@
 <?php wp_footer(); ?>
 
 
-
+<?php /*
   <script type="text/javascript">
     //Adding Slick.js to the top Banner
     //http://kenwheeler.github.io/slick/
-    
+
     jQuery(document).ready(function(){
       jQuery('.pageSlider').slick({
     	adaptiveHeight: false,
     	autoplay: true,
       arrows: false,
-    	autoplaySpeed: 6000,	
+    	autoplaySpeed: 6000,
     	speed: 850,
     	fade: true,
     	cssEase: 'linear'
       });
-    
+
     //Adding Slick.js to the news section
     	jQuery('.newsSlide').slick({
     	adaptiveHeight: false,
     	autoplay: false,
       arrows: false
       });
-    
+
     });
-    
+
 jQuery( "#move-right" ).click(function() {
   jQuery('.newsSlide').slick('slickNext');
-});    
-    
+});
+
   </script>
 
 <script>
-//http://imakewebthings.com/waypoints/  
-  
+//http://imakewebthings.com/waypoints/
+
 //Slider
 var inview = new Waypoint.Inview({
   element: jQuery('.pageSlider-inner'),
@@ -101,9 +101,9 @@ var inview = new Waypoint.Inview({
    jQuery('.siteFooter-divider').addClass('is__visible');
   	console.log('top exited');
   }
-})  
-  
-//Welcome  
+})
+
+//Welcome
 var inview = new Waypoint.Inview({
   element: jQuery('#welcome'),
   enter: function(direction) {
@@ -114,13 +114,13 @@ var inview = new Waypoint.Inview({
   	console.log('enter Welcome');
   }
 })
-  
-//About  
+
+//About
 var inview = new Waypoint.Inview({
   element: jQuery('#about'),
   offset: 120,
   enter: function(direction) {
-   	jQuery('.nav-link').removeClass('active');  
+   	jQuery('.nav-link').removeClass('active');
     jQuery('#about-link').addClass('active');
   	jQuery("#left-arrow-down").prop("href", "#names");
   },
@@ -128,66 +128,67 @@ var inview = new Waypoint.Inview({
    jQuery('#about-link').removeClass('active');
   }
 })
-  
-//Names  
+
+//Names
 var inview = new Waypoint.Inview({
   element: jQuery('#names'),
   offset: 120,
   enter: function(direction) {
-   	jQuery('.nav-link').removeClass('active');  
+   	jQuery('.nav-link').removeClass('active');
     jQuery('#names-link').addClass('active');
-  	jQuery("#left-arrow-down").prop("href", "#press");  
+  	jQuery("#left-arrow-down").prop("href", "#press");
   },
   exited: function(direction) {
    jQuery('#names-link').removeClass('active');
   }
 })
-  
-  
-//Press  
+
+
+//Press
 var inview = new Waypoint.Inview({
   element: jQuery('#press'),
-  offset: 120,  
+  offset: 120,
   enter: function(direction) {
-   	jQuery('.nav-link').removeClass('active');  
+   	jQuery('.nav-link').removeClass('active');
     jQuery('#press-link').addClass('active');
-  	jQuery("#left-arrow-down").prop("href", "#team");  
+  	jQuery("#left-arrow-down").prop("href", "#team");
   },
   exited: function(direction) {
    jQuery('#press-link').removeClass('active');
   }
-}) 
-  
-    
-//Team  
+})
+
+
+//Team
 var inview = new Waypoint.Inview({
   element: jQuery('#team'),
-  offset: 120,  
+  offset: 120,
   enter: function(direction) {
-   	jQuery('.nav-link').removeClass('active');  
+   	jQuery('.nav-link').removeClass('active');
     jQuery('#team-link').addClass('active');
-  	jQuery("#left-arrow-down").prop("href", "#contact");  
+  	jQuery("#left-arrow-down").prop("href", "#contact");
   },
   exited: function(direction) {
    jQuery('#team-link').removeClass('active');
   }
-})  
-  
-    
-//Contact  
+})
+
+
+//Contact
 var inview = new Waypoint.Inview({
   element: jQuery('#contact'),
-  offset: 120,  
+  offset: 120,
   enter: function(direction) {
-   	jQuery('.nav-link').removeClass('active');  
+   	jQuery('.nav-link').removeClass('active');
     jQuery('#contact-link').addClass('active');
   },
   exited: function(direction) {
    jQuery('#contact-link').removeClass('active');
   }
-})  
-   
-</script>  
+})
+
+</script>
+*/ ?>
 
 <script>
     jQuery('.mobile-toggle').click(function() {
