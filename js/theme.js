@@ -25,123 +25,48 @@ function sliderNews() {
 
 
 
+var $wrapper = $('#page');
+var $elements = $('.page-section');
+var $items = $('.nav-link');
+var $arrow = $('#left-arrow-down');
+var $more = $('#move-right');
+
+$('document').ready(function(){
+
+  //waypoints
+    var waypoints = $('.page-section').waypoint({
+      handler: function(direction) {
+        if (direction === 'down') {
+          $items.removeClass('active');
+          var selector = ".nav-link[href='#" + this.element.id + "']";
+          $(selector).addClass('active');
+        }
+        if (direction === 'up') {
+          $items.removeClass('active');
+          var selector = ".nav-link[href='#" + this.element.id + "']";
+          $(selector).addClass('active');
+        }
+      }
+    });
+
+});
+
+$arrow.on('click', function(){
+  var $next = $('#menu').find('.active').parent('li').next().find('.nav-link').attr('href');
+  console.log($next);
+  $(this).attr('href', $next);
+  $('body').scrollTo($next, 800);
+});
 
 
+$items.on('click', function(){
+  console.log($(this).attr('href'));
+  $('body').scrollTo($(this).attr('href'), 800);
+});
 
-
-
-
-  // Waypoint
-  // http://imakewebthings.com/waypoints/
-  var inview = new Waypoint.Inview({
-    element: jQuery('.pageSlider-inner'),
-    enter: function(direction) {
-     	jQuery('.siteFooter-divider').removeClass('is__visible');
-    	console.log('top enter');
-    },
-    entered: function(direction) {
-     	jQuery('.siteFooter-divider').removeClass('is__visible');
-    	console.log('top entered');
-    },
-    exite: function(direction) {
-     jQuery('.siteFooter-divider').addClass('is__visible');
-    	console.log('top exite');
-    },
-    exited: function(direction) {
-     jQuery('.siteFooter-divider').addClass('is__visible');
-    	console.log('top exited');
-    }
-  })
-
-  //Welcome
-  var inview = new Waypoint.Inview({
-    element: jQuery('#welcome'),
-    enter: function(direction) {
-     	jQuery('.nav-link').removeClass('active');
-      jQuery('#welcome-link').addClass('active');
-    	jQuery("#left-arrow-down").prop("href", "#about");
-      jQuery('.siteFooter-divider').addClass('is__visible');
-    	console.log('enter Welcome');
-    }
-  })
-
-  //About
-  var inview = new Waypoint.Inview({
-    element: jQuery('#about'),
-    offset: 120,
-    enter: function(direction) {
-     	jQuery('.nav-link').removeClass('active');
-      jQuery('#about-link').addClass('active');
-    	jQuery("#left-arrow-down").prop("href", "#names");
-    },
-    exited: function(direction) {
-     jQuery('#about-link').removeClass('active');
-    }
-  })
-
-  //Names
-  var inview = new Waypoint.Inview({
-    element: jQuery('#names'),
-    offset: 120,
-    enter: function(direction) {
-     	jQuery('.nav-link').removeClass('active');
-      jQuery('#names-link').addClass('active');
-    	jQuery("#left-arrow-down").prop("href", "#press");
-    },
-    exited: function(direction) {
-     jQuery('#names-link').removeClass('active');
-    }
-  })
-
-
-  //Press
-  var inview = new Waypoint.Inview({
-    element: jQuery('#press'),
-    offset: 120,
-    enter: function(direction) {
-     	jQuery('.nav-link').removeClass('active');
-      jQuery('#press-link').addClass('active');
-    	jQuery("#left-arrow-down").prop("href", "#team");
-    },
-    exited: function(direction) {
-     jQuery('#press-link').removeClass('active');
-    }
-  })
-
-
-  //Team
-  var inview = new Waypoint.Inview({
-    element: jQuery('#team'),
-    offset: 120,
-    enter: function(direction) {
-     	jQuery('.nav-link').removeClass('active');
-      jQuery('#team-link').addClass('active');
-    	jQuery("#left-arrow-down").prop("href", "#contact");
-    },
-    exited: function(direction) {
-     jQuery('#team-link').removeClass('active');
-    }
-  })
-
-
-  //Contact
-  var inview = new Waypoint.Inview({
-    element: jQuery('#contact'),
-    offset: 120,
-    enter: function(direction) {
-     	jQuery('.nav-link').removeClass('active');
-      jQuery('#contact-link').addClass('active');
-    },
-    exited: function(direction) {
-     jQuery('#contact-link').removeClass('active');
-    }
-  })
-
-
-
-
-
-
+$more.click(function() {
+  sliderMore();
+});
 
 
 function theModal() {
@@ -214,24 +139,12 @@ function seeMore() {
 
 $(document).ready(function() {
 
-  // Sliders
   sliderBanner();
   sliderNews();
-
-
-
   theModal();
 
 });
 
-$( "#move-right" ).click(function() {
-  sliderMore();
-});
 
-$(document).on('click', '.collapseomatic', function(){
-  setTimeout(function() {
-    $.fn.fullpage.reBuild();
-  }, 1600);
-});
 
 })(jQuery);

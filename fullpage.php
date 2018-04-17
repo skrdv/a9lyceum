@@ -5,39 +5,25 @@
 ?>
 <?php get_header(); ?>
 
-
-
-
-
 <div id="page">
-    <div id="slider" class="pageSlider-section">
-      <div class="pageSlider">
-        <?php while (have_rows('topslider')): the_row(); ?>
-               <div class="pageSlider-item" style="background-image: url(<?php the_sub_field('photo'); ?>);">
-                 	<div class="pageSlider-inner">
-                    	<div class="pageSlider-content">
-                        <div class="container">
-                    			<h2 class="pageSlider-title"><?php the_sub_field('title'); ?></h2>
-                        	<div class="pageSlider-text"><?php the_sub_field('text'); ?></div>
-                      </div>
-                    	</div>
-                 </div>
-        			</div>
-				<?php endwhile; ?>
-      </div>
+
+  <div id="slider" class="page-section pageSlider-section">
+    <div class="pageSlider">
+      <?php while (have_rows('topslider')): the_row(); ?>
+             <div class="pageSlider-item" style="background-image: url(<?php the_sub_field('photo'); ?>);">
+                <div class="pageSlider-inner">
+                    <div class="pageSlider-content">
+                      <div class="container">
+                        <h2 class="pageSlider-title"><?php the_sub_field('title'); ?></h2>
+                        <div class="pageSlider-text"><?php the_sub_field('text'); ?></div>
+                    </div>
+                    </div>
+               </div>
+            </div>
+      <?php endwhile; ?>
     </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  </div>
+
   <div id="welcome" class="page-section">
     <div class="container-fluid">
       <article class="content">
