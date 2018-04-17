@@ -1,0 +1,699 @@
+body {
+	padding-top: 1;
+}
+
+.siteHeader {
+	position: fixed;
+  height: 100px;
+  z-index: 100;
+  overflow: hidden;
+  
+  margin: 0;
+  padding: 0 50px;
+  
+  top: 0;
+  left: 0;
+  right: 0;
+   
+  background: #1d1d1b; 
+}
+
+@media (max-width: 992px) {
+.siteHeader {
+  height: 97px;
+}	
+}
+
+@media (max-width: 490px) {
+.siteHeader {
+  height: 48px;
+}	
+}
+
+.siteHeader-cloack {
+	position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1d1d1b; 
+  z-index: 99;
+}
+
+/* Site Logo */
+
+.siteHeader-logo {
+  position: relative;
+  z-index: 100;
+  
+	width: 211px;
+  float: right;
+  
+  margin: 10px 0px 0 0;
+}
+
+.siteHeader-logo svg{
+	width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+@media (max-width: 1070px) {
+.siteHeader-logo {
+	width: 170px;
+  float: right;
+  margin: 17px 0 0 0;
+}  
+}
+
+
+@media (max-width: 992px) {
+.siteHeader-logo {
+  height: 97px;
+  overflow: hidden;
+	width: 205px;
+  float: right;
+  margin: 8px 0 0 0;
+}    
+}
+
+@media (max-width: 490px) {
+.siteHeader-logo {
+  height: 45px;
+	width: 100px;
+  margin: 4px 0 0 0;
+}    
+}
+
+
+
+
+
+/* Mobile Toggle */
+
+.mobile-toggle {
+	width: 48px;
+  height: 48px;
+  background: url(../img/hamburger.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: left;
+  margin: 26px 23px;
+  display: none;
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+}
+
+
+@media (max-width: 992px) {
+  
+.siteHeader{
+    overflow: visible;	
+}  
+  
+.mobile-toggle {
+  display: block;
+}
+}
+
+
+@media (max-width: 490px) {
+.mobile-toggle {
+	width: 24px;
+  height: 24px;
+  margin: 12px 6px;
+  position: relative;
+  z-index: 100;
+}
+}
+
+
+
+
+
+
+/* Site Header - Lang */
+
+.siteHeader-lang {
+	display: inline-block;
+  font-size: 12px;
+  line-height: 1;
+  height: 21px;
+  margin-left: 0px;
+  padding-left: 25px;
+  border-left: 1px solid #575656;
+}
+
+.language-chooser {
+	display: inline-block !important;
+  text-align: left;
+  padding: 5px 0px 5px 0px;
+} 
+
+.language-chooser li{
+	display: inline-block !important;
+  margin-right: 15px !important;
+} 
+
+.language-chooser li.active a{
+	color: #fff;
+} 
+
+
+
+
+
+
+
+/* Site Header - Menu */
+.siteHeader-menu {
+  height: 100px;
+  display: inline-block;
+  list-style: none;
+  overflow: hidden;
+  position: relative;
+  z-index: 100;
+  
+  margin: 0 0 0 0;
+  padding: 40px 0;
+  
+  font-size: 12px;
+  line-height: 1;
+  color: #878786;
+  text-align: left;
+}
+
+.siteHeader-menu li{
+  float: left;
+  margin-right: 25px;
+}
+
+.siteHeader-menu a{
+  color: #878786;
+}
+
+.siteHeader-menu a:hover{
+  color: #fff;
+}
+
+.siteHeader-menu a.active {
+    color: #c5161d !important;
+}  
+
+
+
+@media (max-width: 1170px) {
+.siteHeader-menu li{
+  margin-right: 10px;
+}
+.siteHeader-lang {
+  margin-left: 10px;
+}  
+}  
+ 
+
+
+@media (max-width: 1070px) {
+.siteHeader-menu li{
+  margin-right: 5px;
+}
+.siteHeader-lang {
+  margin-left: 5px;
+}  
+}  
+
+
+
+@media (max-width: 992px) {
+.siteHeader {
+  padding: 0 20px;  
+  z-index: 100;
+  }  
+  
+.siteHeader-menu {
+  height: auto;
+  max-height: calc(100vh - 97px);
+	position: fixed;
+  top: -1100px;
+  left: 0;
+  right: 0;  
+  padding: 162px 20px 60px 20px;  
+  background-color: #c00d0e;
+  display: block;
+  transition: all 0.4s ease;
+  z-index: 1;
+  overflow: hidden;
+  overflow-y: scroll;
+}  
+  
+.siteHeader-menu.is__open {
+  top: 97px;
+  transition: all 0.4s ease;  
+  }  
+  
+
+.siteHeader-menu>li{
+		display: block;
+		font-size: 30px;  
+  	font-weight: 500;
+  	letter-spacing: 0.05em;
+  	line-height: 1;
+  	margin: 15px 0 20px 0;
+    float: none;
+  	padding: 0px 30px;
+}   
+  
+.siteHeader-menu a{
+		color: #e18068 !important;
+}  
+  
+.siteHeader-menu a.active{
+		color: #fff !important;
+}
+  
+  
+.siteHeader-lang  {
+	position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; 
+  
+  height: 142px;
+  margin: 0px 41px;  
+  padding: 51px 4px 0 0;
+  
+  border-bottom: 2px solid #1d1d1b;
+  border-left: 0px;
+  text-align: right;
+  
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 500;
+  }
+  
+  li.lang-en  {
+	margin-right: 57px !important;  
+  } 
+}
+
+
+
+@media (max-width: 490px) { 
+.siteHeader-menu {
+  top: -1100px;
+  left: 0;
+  right: 0;  
+  padding: 80px 10px 30px 0px;  
+}  
+  
+.siteHeader-menu.is__open {
+  top: 46px;
+  }  
+  
+
+.siteHeader-menu>li{
+		display: block;
+		font-size: 20px;  
+  	margin: 5px 0 15px 0;
+  	padding: 0px 18px;
+}   
+   
+  
+.siteHeader-lang  {
+  height: 62px;
+  margin: 0px 25px;  
+  padding: 18px 4px 0 0;
+  
+  border-bottom: 1px solid #1d1d1b;
+  
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 500;
+  }
+  
+  li.lang-en  {
+	margin-right: 57px !important;  
+  } 
+  
+  
+  
+}
+
+
+
+
+
+
+/*================= pageSlider =============================*/
+
+.pageSlider-section {
+  	height: 100vh;
+  	margin-bottom: 0vh;
+  	padding: 100px 0;
+		background: #c5161d;
+}
+
+.pageSlider {
+    height: 100%;
+  	background: #fff;
+}
+
+.pageSlider-item {
+  height: calc(100vh - 200px);
+  box-sizing: border-box;
+ 	background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+@media (max-width: 992px) {
+.pageSlider-section {
+  	padding: 97px 0 110px 0;
+}
+}  
+
+@media (max-width: 490px) {
+.pageSlider-section {
+  	padding: 46px 0 55px 0;
+}
+.pageSlider-item {
+  height: calc(100vh - 101px);
+}  
+} 
+
+
+
+
+
+.pageSlider-inner {
+  position: relative;
+  height: 100%;
+  
+	background-image: url(../img/brain-bg.png)  ;
+  background-position: center center;
+  background-size: auto 80%;
+  background-repeat: no-repeat;
+}
+
+.pageSlider-content {
+  position: absolute;
+  
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  padding: 70px 20px;
+  margin: 0;
+  
+	background: rgba(29,29,27,0.4);
+}
+
+.pageSlider-title {
+  Font-family: 'Helvetica Neue', sans-serif !important;
+	font-size: 52px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 40px 0;
+  text-transform: uppercase;
+}
+
+.pageSlider-text {
+  Font-family: 'Helvetica Neue', sans-serif !important;
+	font-size: 26px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 0 90px;
+}
+
+@media (max-width: 992px) {
+.pageSlider-content {
+  padding: 70px 55px  110px 15px;
+}  
+  
+.pageSlider-title {
+	font-size: 44px;
+  margin: 0 0 42px 0px;
+}	
+  
+.pageSlider-text {
+	font-size: 30px;
+  line-height: 36px;
+  margin: 0 0 0 51px;
+}  
+}
+
+@media (max-width: 490px) {
+.pageSlider-content {
+  padding: 30px 25px  40px 15px;
+}  
+  
+.pageSlider-title {
+	font-size: 32px;
+  margin: 0 0 22px 0px;
+}	
+  
+.pageSlider-text {
+	font-size: 20px;
+  line-height: 28px;
+  margin: 0 0 0 31px;
+}  
+}
+
+/* ======================= Footer ===================== */
+
+.siteFooter {
+	height: 100px;
+  position: fixed;
+  z-index: 90;
+  
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  background-color: #c5161d;
+}
+
+.footerNav-left {
+	position: absolute;
+  right: 50%;
+  width: 215px;
+  height: 60px;
+  
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  text-align: right;
+  letter-spacing: 0.05em;
+  
+  padding: 15px 29px 0 0;
+  margin: 15px -1px 0px 0px;
+  border-right: 1px solid #111;
+  
+  background-image: url(../img/arrow-down.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.footerNav-right {
+	position: absolute;
+  left: 50%;
+  width: 215px;
+  height: 60px;
+  
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 0.05em;
+  
+  padding: 15px 29px 0 118px;
+  margin: 15px 0px 0px 0px;
+  
+  background-image: url(../img/arrow-right.png), url(../img/area9learning-logo.png);
+  background-position: right center, 22px center;
+  background-repeat: no-repeat;
+}
+
+#left-arrow-down {
+	display: block;
+  float: left;
+  height: 100%;
+  width: 58px;
+  border: 0px solid #fff;
+  margin: -10px 0 0 -7px;
+}
+
+.siteFooter-divider {
+	margin: 0 auto;
+  height: 1px;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.3s ease;
+  width: 100px;
+}
+
+.siteFooter-divider.is__visible{
+  width: calc(100% - 120px);
+  opacity: 1;
+  transition: all 0.6s ease;
+}
+
+
+
+
+
+
+@media (max-width: 800px) {
+.siteFooter {
+	height: 110px;
+} 
+
+.footerNav-left {
+	position: absolute;
+  right: 50%;
+  bottom: 18px;
+  left: 48px;
+  width: auto;
+  height: 73px;
+  
+  font-size: 12px;
+  line-height: 14px;
+  
+  padding: 15px 29px 0 0;
+  margin: 15px -1px 0px 0px;
+  border-right: 1px solid #111;
+  
+  background-image: url(../img/arrow-down.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+}  
+  
+  
+.footerNav-right{
+  width: auto;
+  height: 73px;
+  right: 44px;
+  left: 50%;
+  top: auto;
+  bottom: 18px;
+  
+  background-image: url(../img/arrow-right.png), url(../img/area9learning-logo.png);
+  background-position: right center, 30px center;
+  background-size: 22px auto, 112px auto;
+  background-repeat: no-repeat;  
+}  
+  
+.footerNav-right p{
+	display: none;
+}
+  
+.siteFooter-divider.is__visible {
+  width: calc(100% - 60px);
+  opacity: 0.8;
+  transition: all 0.6s ease;
+}  
+}
+
+
+
+@media (max-width: 490px) {
+.siteFooter {
+	height: 53px;
+} 
+
+.footerNav-left {
+	position: absolute;
+  right: 50%;
+  bottom: 9px;
+  left: 30px;
+  width: auto;
+  height: 36px;
+  
+  font-size: 7px;
+  line-height: 9px;
+  
+  padding: 7px 15px 0 0;
+  margin: 7px -1px 0px 0px;
+  border-right: 1px solid #111;
+  
+  background-image: url(../img/arrow-down.png);
+  background-size: 25px auto;
+  background-position: left center;
+  background-repeat: no-repeat;
+}  
+  
+  
+.footerNav-right{
+  width: auto;
+  height: 36px;
+  right: 30px;
+  left: 50%;
+  top: auto;
+  bottom: 9px;
+  
+  background-image: url(../img/arrow-right.png), url(../img/area9learning-logo.png);
+  background-position: right center, 10px center;
+  background-size: 10px auto, 60px auto;
+  background-repeat: no-repeat;  
+}  
+  
+.footerNav-right p{
+	display: none;
+}  
+  
+#left-arrow-down {
+  width: 40px;
+  margin: -5px 0 0 -7px;
+}  
+}
+
+@media (max-width: 620px) and (orientation: landscape) {
+  .siteFooter {
+  	display: none;
+  }
+  
+  .pageSlider-section {
+  	padding-bottom: 0;
+  }
+  
+  .pageSlider-item {
+  	height: calc(100vh - 46px);
+  }
+  
+  
+  
+}  
+
+
+
+/*=================================================*/
+
+.page-section {
+	min-height: 100vh;
+  padding: 20vh 0 20vh 0;
+  margin: 20px 0;
+}
+
+/* ====================== News Slide =================================*/
+
+.newsSlide {
+
+}
+
+.nav-link {
+	cursor: pointer;
+}
+
+@media (max-width: 800px) {
+	 .box-image {
+    height: 52vw;
+  }
+  
+  .section .slide .slide-content .box  {
+  	width: 100%;
+  }
+}
+
+
